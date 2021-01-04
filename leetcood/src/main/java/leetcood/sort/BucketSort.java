@@ -3,7 +3,7 @@ package leetcood.sort;
 import java.util.Arrays;
 
 /**
- * @description: Í°ÅÅĞò
+ * @description: æ¡¶æ’åº
  * @author st14762
  *
  */
@@ -12,7 +12,7 @@ public class BucketSort implements IArraySort {
 	private static final InsertSort insertSort = new InsertSort();
 
 	public int[] sort(int[] sourceArray) throws Exception {
-		// ¶Ô arr ½øĞĞ¿½±´£¬²»¸Ä±ä²ÎÊıÄÚÈİ
+		// å¯¹ arr è¿›è¡Œæ‹·è´ï¼Œä¸æ”¹å˜å‚æ•°å†…å®¹
 		int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
 
 		return bucketSort(arr, 5);
@@ -36,7 +36,7 @@ public class BucketSort implements IArraySort {
 		int bucketCount = (int) Math.floor((maxValue - minValue) / bucketSize) + 1;
 		int[][] buckets = new int[bucketCount][0];
 
-		// ÀûÓÃÓ³Éäº¯Êı½«Êı¾İ·ÖÅäµ½¸÷¸öÍ°ÖĞ
+		// åˆ©ç”¨æ˜ å°„å‡½æ•°å°†æ•°æ®åˆ†é…åˆ°å„ä¸ªæ¡¶ä¸­
 		for (int i = 0; i < arr.length; i++) {
 			int index = (int) Math.floor((arr[i] - minValue) / bucketSize);
 			buckets[index] = arrAppend(buckets[index], arr[i]);
@@ -47,7 +47,7 @@ public class BucketSort implements IArraySort {
 			if (bucket.length <= 0) {
 				continue;
 			}
-			// ¶ÔÃ¿¸öÍ°½øĞĞÅÅĞò£¬ÕâÀïÊ¹ÓÃÁË²åÈëÅÅĞò
+			// å¯¹æ¯ä¸ªæ¡¶è¿›è¡Œæ’åºï¼Œè¿™é‡Œä½¿ç”¨äº†æ’å…¥æ’åº
 			bucket = insertSort.sort(bucket);
 			for (int value : bucket) {
 				arr[arrIndex++] = value;
@@ -58,7 +58,7 @@ public class BucketSort implements IArraySort {
 	}
 
 	/**
-	 * ×Ô¶¯À©Èİ£¬²¢±£´æÊı¾İ
+	 * è‡ªåŠ¨æ‰©å®¹ï¼Œå¹¶ä¿å­˜æ•°æ®
 	 *
 	 * @param arr
 	 * @param value

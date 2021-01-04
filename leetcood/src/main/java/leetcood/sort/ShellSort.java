@@ -3,14 +3,14 @@ package leetcood.sort;
 import java.util.Arrays;
 
 /**
- * @description: Ï£¶ûÅÅĞò
+ * @description: å¸Œå°”æ’åº
  * @author st14762
  *
  */
 public class ShellSort implements IArraySort {
 
 	public int[] sort(int[] sourceArray) throws Exception {
-		// ¶Ô arr ½øĞĞ¿½±´£¬²»¸Ä±ä²ÎÊıÄÚÈİ
+		// å¯¹ arr è¿›è¡Œæ‹·è´ï¼Œä¸æ”¹å˜å‚æ•°å†…å®¹
 		int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
 
 		int gap = 1;
