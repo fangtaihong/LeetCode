@@ -1,3 +1,6 @@
 .settings/
+.idea/
 target/
+leetcood.iml
+
 
